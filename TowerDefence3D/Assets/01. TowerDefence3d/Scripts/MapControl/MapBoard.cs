@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -16,6 +17,12 @@ public class MapBoard : MonoBehaviour
     [SerializeField]
     public int TileSizeY = 20;
 
+    //  Test : RunTime NavBake
+    private NavMeshSurface surfaces;
+
+
+
+    
 
     // 좌하단 타일 시작 지점
     private Vector3 tileZeroPos = new Vector3(-9.5f, 0f, -9.5f);
@@ -35,6 +42,13 @@ public class MapBoard : MonoBehaviour
         tileList = new List<GameObject>();
 
         InitMap();
+
+        tileMap.AddComponent<NavMeshSurface>();
+        surfaces = tileMap.GetComponent<NavMeshSurface>();
+        surfaces.BuildNavMesh();
+        //surfaces.
+
+
     }
 
     private void InitMap()
@@ -56,7 +70,7 @@ public class MapBoard : MonoBehaviour
         while (loopCnt > 0)
         {
             // 시작지점 0번 타일과 목적지 마지막 타일 제외하고 장애물 설치
-            int randIndx = Random.Range(1, (TileSizeX * TileSizeY) - 1);
+            int randIndx = Random.Range(20, (TileSizeX * TileSizeY) - 20);
             Tile tile = tileList[randIndx].GetComponent<Tile>();
             if (tile.isObstacle == true || tile.IsPassable == false) { continue; }
             tile.isObstacle = true;

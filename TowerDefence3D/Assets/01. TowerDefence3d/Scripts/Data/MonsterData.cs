@@ -8,5 +8,5 @@ public class MonsterData : ScriptableObject
     public string monsterName;
     public float maxHp;
     public float curHp;
-    public int moveSpedd;
+    public float moveSpedd;
 }

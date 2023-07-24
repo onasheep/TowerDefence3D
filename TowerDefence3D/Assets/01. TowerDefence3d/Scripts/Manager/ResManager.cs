@@ -20,7 +20,7 @@ public class ResManager : GSingleton<ResManager>
     public Dictionary<string, GameObject> obstaclePrefabs = default;
     public Dictionary<string, GameObject> platformPrefabs = default;
     public Dictionary<string, GameObject> monsterPrefabs = default;
-    public Dictionary<string, GameObject> turretPrefabs = default;
+    public Dictionary<string, GameObject> turretTowerPrefabs = default;
     public Dictionary<string, GameObject> bulletPrefabs = default;
 
     public Dictionary<string, MonsterData> scriptableObjs = default;
@@ -43,8 +43,8 @@ public class ResManager : GSingleton<ResManager>
         monsterPrefabs = new Dictionary<string, GameObject>();
         monsterPrefabs.AddObjs(Resources.LoadAll<GameObject>(MONSTER_PREF_PATH));      
 
-        turretPrefabs = new Dictionary<string, GameObject>();
-        turretPrefabs.AddObjs(Resources.LoadAll<GameObject>(TURRET_PREF_PATH));
+        turretTowerPrefabs = new Dictionary<string, GameObject>();
+        turretTowerPrefabs.AddObjs(Resources.LoadAll<GameObject>(TURRET_PREF_PATH));
 
         bulletPrefabs = new Dictionary<string, GameObject>();
         bulletPrefabs.AddObjs(Resources.LoadAll<GameObject>(BULLET_PREF_PATH));

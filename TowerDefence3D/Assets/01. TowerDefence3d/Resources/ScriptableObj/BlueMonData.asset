@@ -15,4 +15,4 @@ MonoBehaviour:
   monsterName: BlueMon
   maxHp: 200
   curHp: 200
-  moveSpedd: 3
+  moveSpedd: 1

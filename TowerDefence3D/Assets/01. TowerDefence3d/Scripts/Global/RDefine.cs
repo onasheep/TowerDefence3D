@@ -20,7 +20,7 @@ public static class RDefine
 
     public const string BASIC_BULLET = "BasicBullet";
 
-
+    public const string BASIC_TOWER = "TurretTower01";
 
 
 }

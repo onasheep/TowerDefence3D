@@ -15,4 +15,4 @@ MonoBehaviour:
   monsterName: RedMon
   maxHp: 100
   curHp: 100
-  moveSpedd: 8
+  moveSpedd: 1.5

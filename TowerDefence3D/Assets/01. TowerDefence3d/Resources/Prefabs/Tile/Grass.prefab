@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23007987366238138}
   - component: {fileID: 65910483985868152}
   - component: {fileID: 3052513137145956121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11e18b27992d9e42971d836d02ec6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTurret: 0
+  isObstacle: 0
